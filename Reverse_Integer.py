@@ -1,21 +1,8 @@
-n=str(input())
-if n.startswith("-"):
-    j=n.replace("-","")
-    x=int(j)
-    z=""
-    while x>0:
-        a=x%10
-        if a!=0:
-            z=z+str(a)
-        x=x//10
-    z="-"+z
-    print(z)
+n=int(input())
+c=str(n)
+if n<0:
+    c=c[1:]
+    c=c[::-1]
+    print(0-int(c))
 else:
-    x=int(n)
-    z=""
-    while x>0:
-        a=x%10
-        if a!=0:
-            z=z+str(a)
-        x=x//10
-    print(z)
+    print(int(c[::-1]))
